@@ -4,21 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Street View Navigation</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #street-view {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        #controls {
+            margin: 10px 0;
+        }
+        select, button {
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        select {
+            min-width: 200px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Street View Navigation</h1>
         <div id="controls">
-            <button id="startBtn">Start Journey</button>
-            <button id="stopBtn">Stop</button>
+            <select id="locationSelect">
+                <option value="">Select a location</option>
+                <option value="location1">Regus Office, Enfield</option>
+                <option value="location2">Location 2</option>
+                <option value="location3">Location 3</option>
+                <option value="location4">Location 4</option>
+            </select>
+            <!-- <button id="startBtn">Start Journey</button>
+            <button id="stopBtn">Stop</button> -->
         </div>
         <div id="street-view"></div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9yVLonCjs6Wk9h02nOWqBKCo_ZpcZ2F0"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key="AIzaSyD9yVLonCjs6Wk9h02nOWqBKCo_ZpcZ2F0"></script>
     <script src="scripts/app.js"></script>
 </body>
 </html>
